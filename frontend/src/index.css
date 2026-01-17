@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.font-inter {
+    font-family: "Inter", serif;
+}
+
+.font-raleway {
+    font-family: "Raleway", serif;
+}
