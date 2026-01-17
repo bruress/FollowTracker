@@ -12,7 +12,7 @@ const Text = ({text, type, classes}:TextProps) => {
     const baseStyles = {
         title: "text-[64px] font-bold font-raleway",
         subtitle: "text-[24px] font-inter",
-        paragraph: ""
+        paragraph: "text[20px] font-inter"
     };
 
     {/* combinating styles with style classes */}
