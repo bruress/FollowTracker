@@ -3,7 +3,7 @@ import { opp_items } from "../constant/data";
 
 const Opportunities = () => {
     return (
-        <section className="mt-[150px] w-full h-screen">
+        <section className="mt-[150px] w-full">
             {/* container */}
             <div className="mx-[300px]">
                 <Text

@@ -4,13 +4,13 @@ const Cost = () => {
     return (
         <>
             {/* container */}
-            <div className="flex flex-col items-center justify-center mx-[300px] h-screen">
+            <section className="flex flex-col items-center justify-center mx-[300px] h-screen">
                 {/* text */}
                 <div className="mb-[70px] w-[890px]">
                     <Text
                         text="Индивидуальная стоимость"
                         type="title"
-                        classes="font-bold text-[#040C22] text-center"
+                        classes="font-bold text-center"
                     />
                     <Text
                         text="Итоговая цена рассчитывается индивидуально в зависимости от задач, объёма данных и необходимых возможностей."
@@ -64,7 +64,7 @@ const Cost = () => {
 
 
 
-            </div>
+            </section>
         </>
     );
 };
