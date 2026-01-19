@@ -9,10 +9,10 @@ const Opportunities = () => {
                 <Text
                     text="Наши возможности"
                     type="title"
-                    classes="text-[#040C22] text-center"
+                    classes="text-[#040C22] text-center mb-[50px]"
                 />
                 {/* wrapper */}
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-3 gap-[50px]">
                     {opp_items.map((item) => (
                             <div className="rounded-[50px] pt-[50px] text-[#040C22] w-[400px] h-[400px] shadow-lg/8 shadow-[#872CAB]" key={item.id}>
                             {/* icon */}
