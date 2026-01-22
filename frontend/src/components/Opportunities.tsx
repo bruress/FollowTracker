@@ -3,40 +3,39 @@ import { opp_items } from "../constant/data";
 
 const Opportunities = () => {
     return (
-        <section className="mt-[150px] w-full">
+        <>
             {/* container */}
-            <div className="mx-[300px]">
-                <Text
-                    text="Наши возможности"
-                    type="title"
-                    classes="text-[#040C22] text-center mb-[50px]"
-                />
-                {/* wrapper */}
-                <div className="grid grid-cols-3 gap-[50px]">
-                    {opp_items.map((item) => (
-                            <div className="rounded-[50px] pt-[50px] text-[#040C22] w-[400px] h-[400px] shadow-lg/8 shadow-[#872CAB]" key={item.id}>
-                            {/* icon */}
-                            <span className="mx-auto flex items-center justify-center rounded-full w-[100px] h-[100px] bg-[#17145E]">
-                                <item.icon/>
-                            </span>
-                            {/* text */}
-                            <div className="pt-[30px] ">
-                                <Text
-                                    text={item.title}
-                                    type="subtitle"
-                                    classes="font-raleway font-bold text-center"
-                                />
-                                <Text
-                                    text={item.subtitle}
-                                    type="paragraph"
-                                    classes="pt-[20px] text-center"
-                                />
+            <section className="mx-[20px] mt-[150px] sm:mx-[30px] xl:mx-[150px] 2xl:mx-[300px]">
+                    <Text
+                        text="Наши возможности"
+                        type="title_dr"
+                        classes="text-center mb-[50px]"
+                    />
+                    {/* wrapper */}
+                    <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
+                        {/* card */}
+                        {opp_items.map((item) => (
+                                <div className="rounded-[50px] px-[10px] py-[60px] text-[#040C22] shadow-lg/8 shadow-[#872CAB] duration-500 hover:shadow-xl/15" key={item.id}>
+                                {/* icon */}
+                                <span className="mx-auto flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#17145E]">
+                                    <item.icon className="block"/>
+                                </span>
+                                {/* text */}
+                                <div className="pt-[30px]">
+                                    <Text
+                                        text={item.title}
+                                        type="subtitle_cd"
+                                    />
+                                    <Text
+                                        text={item.subtitle}
+                                        type="paragraph_cd"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+                        ))}
+                    </div>
+            </section>
+        </>
     );
 };
 
