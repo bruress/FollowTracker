@@ -1,41 +1,31 @@
 import { type Variants } from "motion";
 
-export const staggerContainer: Variants = {
-  hidden: {},
+export const animContainer: Variants = {
+  hidden: {opacity: 1},
   show: {
+    opacity: 1,
     transition: {
-      staggerChildren: 0.4,
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+      ease: "easeInOut"
     },
   },
 };
 
-export const fadeInUp: Variants = {
+export const popUp: Variants = {
   hidden: {
-    y: 30,
+    y: 40,
     opacity: 0,
-    filter: "blur(5px)",
+    rotateX: -10,
   },
   show: {
     y: 0,
     opacity: 1,
-    filter: "blur(0)",
+    rotateX: 0,
     transition: {
       duration: 0.7,
       ease: "easeInOut",
-    },
-  },
-};
-export const fadeIn: Variants = {
-  hidden: {
-    opacity: 0,
-    filter: "blur(5px)",
-  },
-  show: {
-    opacity: 1,
-    filter: "blur(0)",
-    transition: {
-      duration: 0.5,
-      ease: "easeIn",
+      stiffness: 100,
     },
   },
 };
