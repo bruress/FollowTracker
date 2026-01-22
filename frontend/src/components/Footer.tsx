@@ -38,7 +38,7 @@ const Footer = () => {
                         <Platform className="w-[120px] sm:w-auto"/>
                     </div>
                 </motion.div>
-
+                {/* footer text */}
                 <motion.div
                     variants={type.popUp}>
                     <Text
@@ -46,7 +46,6 @@ const Footer = () => {
                         type="paragraph_wh"
                         classes="2xl:px-[100px] text-center"
                     />
-                    
                 </motion.div>
             </motion.div>
         </footer>

@@ -3,7 +3,7 @@ import { Drop } from "../constant/Svg";
 
 const Graph = () => {
     return (
-        <section className="mt-[100px] mb-[150px] left-0 top-0 bg-[url(src/assets/back-2.png)] bg-cover w-full h-[1200px] items-center">
+        <section className="mt-[100px] left-0 top-0 bg-[url(src/assets/back-2.png)] bg-cover w-full h-[1200px] items-center">
             {/* container */}
             <div className="mx-[300px] h-full ">
 
