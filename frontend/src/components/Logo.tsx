@@ -8,8 +8,7 @@ const Logo = () => {
             <a>
                 <Text
                     text="FollowTracker"
-                    type="subtitle"
-                    classes="text-[#ffffff]"
+                    type="subtitle_wh"
                 />
             </a>
         </div>

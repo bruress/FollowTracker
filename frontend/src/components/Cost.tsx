@@ -4,7 +4,7 @@ const Cost = () => {
     return (
         <>
             {/* container */}
-            <section className="flex flex-col items-center justify-center mx-[300px] h-screen">
+            <section className="mb-[250px] flex flex-col items-center justify-center mx-[300px] h-screen">
                 {/* text */}
                 <div className="mb-[70px] w-[890px]">
                     <Text

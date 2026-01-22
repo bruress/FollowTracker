@@ -7,7 +7,7 @@ const Opportunities = () => {
     return (
         <>
             {/* container */}
-            <section className="mx-[20px] mt-[150px]  sm:mx-[30px] xl:mx-[150px] 2xl:mx-[300px]">
+            <section className="mx-[20px] mt-[150px] sm:mx-[150px] 2xl:mx-[300px]">
                 <motion.div
                     variants={type.animContainer}
                     initial="hidden"
@@ -27,7 +27,7 @@ const Opportunities = () => {
                     {/* wrapper */}
                     <motion.div  
                         variants={type.popUp}
-                        className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
+                        className="grid gap-[30px] md:grid-cols-2 lg:grid-cols-3">
                         {/* card */}
                         {opp_items.map((item) => (
                             <div 

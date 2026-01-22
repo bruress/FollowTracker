@@ -10,14 +10,14 @@ const Text = ({text, type, classes}:TextProps) => {
 
     {/* base styles for text */}
     const baseStyles = {
-        title_dr: "lg:text-[64px] sm:text-[48px] text-[40px] font-bold font-raleway text-[#040C22]",
-        title_wh: "sm:text-[64px] font-bold font-raleway text-[32px] text-[#ffffff]",
+        title_dr: "font-raleway text-[40px] font-bold text-[#040C22] sm:text-[48px] lg:text-[64px]",
+        title_wh: "font-raleway text-[32px] font-bold text-[#ffffff] sm:text-[64px]",
         subtitle_wh: "text-[#ffffff] sm:text-[24px] text-[14px] font-raleway ",
         subtitle_dr: "text-[#040C22] sm:text-[24px] text-[14px] font-raleway text-center pb-[8px]" ,
         subtitle_gr: "text-[#58627F] sm:text-[24px] text-[14px] font-raleway ",
         subtitle_cd: "text-[24px] font-raleway font-bold text-center",
         paragraph: "text[20px] font-inter",
-        paragraph_wh: "text[20px] font-inter text-[#ffffff]",
+        paragraph_wh: "lg:text-[20px] sm:text-[14px] font-inter text-[12px] text-[#ffffff]",
         paragraph_cd: "text[16px] font-inter pt-[20px] text-center",
     };
 
