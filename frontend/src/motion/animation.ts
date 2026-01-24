@@ -29,3 +29,23 @@ export const popUp: Variants = {
     },
   },
 };
+
+export const mainBlur: Variants = {
+  hidden: {
+    y: 50,
+    opacity: 0,
+    rotateX: -10,
+    filter: "blur(5px)",
+  },
+  show: {
+    y: 0,
+    filter: "blur(0)",
+    opacity: 1,
+    rotateX: 0,
+    transition: {
+      duration: 0.9,
+      ease: "easeInOut",
+      stiffness: 100,
+    },
+  },
+};

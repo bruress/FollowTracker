@@ -1,48 +1,38 @@
 import Text from "./Text";
 import Header from "./Header";
+import img from "../assets/graphics.png"
+import { motion } from "motion/react";
+import * as type from "../motion/animation";
 
 const Hero = () => {
     return (
-        <section className="bg-[url(src/assets/back-1.png)] bg-cover relative w-full h-[1121px]">
+        <motion.section 
+            className="relative bg-[url(src/assets/back-1.png)] bg-cover bg-contain lg:bg-bottom min-h-[700px] sm:min-h-[1000px] lg:min-h-screen"
+            variants={type.animContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{once: true}}
+        >
+            <Header/>
             {/* containter */}
-            <div className="mx-[300px] pt-[250px]">
-                <div className="flex justify-between items-center gap-[180px]">
-                    <div className="flex w-full">
-                        {/* first graph */}
-                        <div>
-                            <div className="bg-[#F9F5FF] w-[450px] h-[350px] border-[1px] border-[#040C22] rounded-[50px]">
-                            </div>
-                            <Text
-                                text="Динамика подписчиков «ВКонтакте»"
-                                type="subtitle"
-                                classes="text-[#ffffff] w-[300px]"
-                            />
-                        </div>
-                        {/* second graph */}
-                        <div className="flex-col items-center flex absolute pl-[300px] pt-[130px]">
-                            <div className="bg-[#FEFEFF] w-[450px] h-[350px] border-[1px] border-[#040C22] rounded-[50px]">
-                            </div>
-
-                            <Text
-                                text="Динамика подписчиков «ВКонтакте для бизнеса»"
-                                type="subtitle"
-                                classes="text-center w-[350px] text-[#ffffff]"
-                            />
-
-                        </div>
-                    </div>
-                    {/* text */}
-                    <div className="max-w-[420px]">
-                        <Text
-                            text="Умная аналитика социальных сетей"
-                            type="title"
-                            classes="text-[#ffffff]"
-                        />
-                    </div>
+            <motion.div 
+                variants={type.mainBlur}
+                className="flex xl:flex-row flex-col-reverse xl:justify-between items-center gap-[20px] mx-[20px] sm:mx-[150px] 2xl:mx-[300px] mt-[50px] sm:mt-[100px]">
+                {/* image */}
+                <img
+                    src={img}
+                    alt="hero image"
+                    className="w-fit 2xl:w-full xl:max-w-xl"
+                />
+                {/* text */}
+                <div className="2xl:max-w-[400px] xl:max-w-[320px]">
+                    <Text
+                        text="Умная аналитика социальных сетей"
+                        type="title_wh"
+                    />
                 </div>
-            </div>
-        </section>
-
+            </motion.div>
+        </motion.section>
     );
 };
 

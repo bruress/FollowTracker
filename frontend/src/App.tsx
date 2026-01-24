@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Opportunities from "./components/Opportunities";
 import Graph from "./components/Graph";
@@ -9,7 +8,6 @@ import Footer from "./components/Footer";
 const App = () => {
     return (
         <>
-            <Header/>
             <main>
                 <Hero/>
                 <Opportunities/>

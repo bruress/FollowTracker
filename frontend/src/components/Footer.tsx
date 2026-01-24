@@ -18,7 +18,7 @@ const Footer = () => {
                 className="flex flex-col items-center md:items-stretch gap-[70px] mx-[20px] sm:mx-[150px] 2xl:mx-[300px] py-[50px]">
                 {/* columns */}
                 <motion.div
-                    variants={type.popUp}
+                    variants={type.mainBlur}
                     className="gap-[40px] md:gap-0 grid md:grid-cols-2">
                     {/* first column */}
                     <div className="flex flex-col gap-[25px]">
@@ -40,7 +40,7 @@ const Footer = () => {
                 </motion.div>
                 {/* footer text */}
                 <motion.div
-                    variants={type.popUp}>
+                    variants={type.mainBlur}>
                     <Text
                         text="Проект реализован при поддержке Фонда содействия инновациям в рамках программы «Студенческий стартап» мероприятия «Платформа университетского технологического предпринимательства» федерального проекта «Технологии»"
                         type="paragraph_wh"
