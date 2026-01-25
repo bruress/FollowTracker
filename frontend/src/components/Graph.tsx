@@ -1,46 +1,62 @@
 import Text from "./Text";
 import { Drop } from "../constant/Svg";
+import {LineChartComponent, LineChartWidget }from "./LineChart";
+import { useState } from "react";
+import { titles } from "../constant/recharts";
+import { motion } from 'motion/react';
+import * as type from "../motion/animation";
 
 const Graph = () => {
+    const [selected, setSelected] = useState("engagement_drop");
+    const actived = titles[selected];
     return (
-        <section className="mt-[100px] left-0 top-0 bg-[url(src/assets/back-2.png)] bg-cover w-full h-[1200px] items-center">
-            {/* container */}
-            <div className="mx-[300px] h-full ">
-
-                <div className="flex items-center justify-center flex-col pt-[200px] gap-[70px]">
+        <motion.section 
+            variants={type.animContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{once:true, amount:0.4}}
+            className="bg-[linear-gradient(0deg,rgba(38,26,75,1)_30%,rgba(12,12,60,1)_70%)] mt-[250px] py-[100px]">
+            <div className="mx-[20px] sm:mx-[150px] 2xl:mx-[300px]">
+                <motion.div 
+                    variants={type.popUp}
+                    className="flex justify-center">
                     <Text
                         text="Попробуйте сами"
-                        type="title"
-                        classes="font-bold text-[#ffffff]"
+                        type="title_wh"
+                        classes="mb-[50px]"
                     />
-                    <div className="w-[1300px] h-[600px] bg-[#FEFEFF] rounded-[35px] border-[#040C22] border-[1px]">
-                        {/* menu container*/}
-                        <div className="flex m-[40px] justify-between items-center">
-                            <div className="flex gap-[100px]">
-                                {/* first menu */}
-                                <div className="justify-between px-[20px] text-[#040C22] font-inter text-[20px] flex items-center w-[200px] h-[50px] border-[1px] border-[#040C22] rounded-[15px]">
-                                    <span>Группа</span>
-                                    <Drop/>
-                                </div>
-                                {/* second menu */}
-                                <div className="justify-between px-[20px] text-[#040C22] font-inter text-[20px] flex items-center w-[200px] h-[50px] border-[1px] border-[#040C22] rounded-[15px]">
-                                    <span>Анализ</span>
-                                    <Drop/>
-                                </div>
-                            </div>
-                            <span className="font-bold text-[32px] font-raleway">
-                                Февраль
-                            </span>
-                        </div>
-                        {/* graph container */}
-                        <div>
-
-                        </div>
+                </motion.div>
+                <motion.div 
+                    variants={type.mainBlur}
+                    className="flex flex-col justify-between gap-[50px]">
+                    <div className="bg-[#FEFEFF] p-[20px] border-[#040C22] border-[1px] rounded-[35px] w-full">
+                        <LineChartComponent
+                            dataKeyValue={selected}
+                        />
                     </div>
-                </div>
-
-            </div>
-        </section>
+                    <div className="gap-[30px] grid md:grid-cols-2 lg:grid-cols-3">
+                        {Object.entries(titles).map(([key, value]) => (
+                            <div className="text-center">
+                                <div
+                                    key={key}
+                                    onClick={() => setSelected(key)}
+                                    className="bg-[#FEFEFF] hover:bg-[#ebebf9] p-[30px] border-[#040C22] border-[1px] rounded-[35px] duration-500"
+                                >
+                                    <LineChartWidget
+                                        dataKeyValue={key}
+                                    />
+                                </div>
+                                <Text
+                                    text={value.label}
+                                    type="paragraph_wh"
+                                    classes="pt-[5px] cursor-pointer"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+            </div> 
+        </motion.section>
     );
 };
 

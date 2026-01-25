@@ -7,7 +7,7 @@ import * as type from "../motion/animation";
 const Hero = () => {
     return (
         <motion.section 
-            className="relative bg-[url(src/assets/back-1.png)] bg-cover bg-contain lg:bg-bottom min-h-[700px] sm:min-h-[1000px] lg:min-h-screen"
+            className="bg-[url(src/assets/back-1.png)] bg-cover bg-contain bg-bottom min-h-[700px] sm:min-h-[1000px] lg:min-h-screen"
             variants={type.animContainer}
             initial="hidden"
             whileInView="show"
