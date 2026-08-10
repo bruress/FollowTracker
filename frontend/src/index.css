@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+    color: #040c22;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+}
+
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
+
+.font-raleway {
+    font-family: "Raleway", sans-serif;
+}
+
+.sim-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    border-radius: 999px;
+    background: #cfd2de;
+    outline: none;
+}
+
+.sim-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #17145e;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(23, 20, 94, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sim-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(23, 20, 94, 0.45);
+}
+
+.sim-slider::-moz-range-track {
+    height: 10px;
+    border-radius: 999px;
+    background: transparent;
+}
+
+.sim-slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #17145e;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(23, 20, 94, 0.35);
+}

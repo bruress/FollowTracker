@@ -1,0 +1,26 @@
+services:
+  backend:
+    image: bruress/postmetric-landing:backend-latest
+    container_name: postmetric-landing_backend
+    build:
+      context: ./backend/
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      CLIENT_URL: "*"
+    volumes:
+      - ./backend/data:/app/data
+    ports:
+      - "3000:3000"
+  frontend:
+    image: bruress/postmetric-landing:frontend-latest
+    container_name: postmetric-landing_frontend
+    build:
+      context: ./frontend/
+      args:
+        VITE_API_URL: /api
+    depends_on:
+      - backend
+    restart: unless-stopped
+    ports:
+      - "80:80"
